@@ -80,12 +80,14 @@ class GridCanvas extends Canvas {
 
 	public void paint(Graphics g) {
 		Graphics2D g2D = (Graphics2D)g;
+		
 		// calculate the number of cells to be shown
 		width = (getWidth() / span - 1) / 2;
 		height = (getHeight() / span - 1) / 2;
 		xoff = getWidth() / 2;
 		yoff = getHeight() / 2;
 		drawGrid(g2D);
+		
 		// example of how to display a dot
 		g2D.setColor(Color.red);
 		g2D.fill(new Dot(0, 0));
